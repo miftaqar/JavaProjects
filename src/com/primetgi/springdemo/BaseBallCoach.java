@@ -2,6 +2,14 @@ package com.primetgi.springdemo;
 
 public class BaseBallCoach implements Coach {
 
+	//define a private field
+	private FortuneService fortuneService;
+	
+	//define a constructor for dependency injection
+	public BaseBallCoach(FortuneService theFortuneService) {
+		fortuneService = theFortuneService;
+	}
+
 	@Override
 	public String getDailyWorkout() {
 		return "Spend 30 mins on Batting Practice - BaseBallCoach";
@@ -9,7 +17,8 @@ public class BaseBallCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		//use fortuneService to call getFortuneService
+		
+		return fortuneService.getFortuneService();
 	}
 }
