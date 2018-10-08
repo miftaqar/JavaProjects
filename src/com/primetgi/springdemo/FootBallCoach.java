@@ -8,5 +8,11 @@ public class FootBallCoach implements Coach{
 		return "Practice Running for 1 hour - FootBall Coach";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	 
 }
