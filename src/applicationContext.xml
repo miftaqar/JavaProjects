@@ -12,7 +12,7 @@
 	<bean id="myFortune" class="com.primetgi.springdemo.HappyFortuneService">
 	</bean>
 
-	<bean id="myCoach" class="com.primetgi.springdemo.BaseBallCoach">
+	<bean id="myCoach" class="com.primetgi.springdemo.TrackCoach">
 		<constructor-arg ref="myFortune" />
 	</bean>
 
