@@ -16,6 +16,9 @@
 		<constructor-arg ref="myFortune" />
 	</bean>
 
+	<bean id="myCricketCoach" class="com.primetgi.springdemo.CricketCoach">
+		<property name="fortuneService" ref="myFortune"></property>
+	</bean>
 
 </beans>
 
