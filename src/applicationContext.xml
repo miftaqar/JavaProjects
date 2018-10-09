@@ -11,7 +11,7 @@
 	<!-- Define the beans here -->
 
 	<!-- Define the dependency here -->
-	<bean id="myFortune" class="com.primetgi.springdemo.HappyFortuneService">
+	<bean id="myFortune" class="com.primetgi.springdemo.RandomFortuneService">
 	</bean>
 
 	<bean id="myCoach" class="com.primetgi.springdemo.TrackCoach">
