@@ -4,6 +4,10 @@ public class CricketCoach implements Coach {
 
 	private FortuneService fortuneService;
 
+	// create new fields
+	private String emailAddress;
+	private String team;
+
 	// create a non arg constructor
 	public CricketCoach() {
 		System.out.println("CricketCoach: Inside non arg Constructor");
@@ -23,6 +27,24 @@ public class CricketCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		return fortuneService.getFortuneService();
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		System.out.println("CricketCoach: Inside Setter Method - setEmailAddress");
+		this.emailAddress = emailAddress;
+	}
+
+	public void setTeam(String team) {
+		System.out.println("CricketCoach: Inside Setter Method - setTeam");
+		this.team = team;
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public String getTeam() {
+		return team;
 	}
 
 }

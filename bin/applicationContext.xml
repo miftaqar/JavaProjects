@@ -17,7 +17,12 @@
 	</bean>
 
 	<bean id="myCricketCoach" class="com.primetgi.springdemo.CricketCoach">
+		<!-- set up setter injection -->
 		<property name="fortuneService" ref="myFortune"></property>
+
+		<!-- inject literal values -->
+		<property name="emailAddress" value="theBestCoach@gmail.com"></property>
+		<property name="team" value="Sunrisers Hyderabad"></property>
 	</bean>
 
 </beans>
