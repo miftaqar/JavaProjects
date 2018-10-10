@@ -12,7 +12,8 @@
 	<bean id="myFortune" class="com.primetgi.springdemo.RandomFortuneService">
 	</bean>
 
-	<bean id="myCoach" class="com.primetgi.springdemo.TrackCoach">
+	<bean id="myCoach" class="com.primetgi.springdemo.TrackCoach"
+		scope="prototype">
 		<constructor-arg ref="myFortune" />
 	</bean>
 
