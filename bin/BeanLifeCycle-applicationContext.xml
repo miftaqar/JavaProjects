@@ -13,7 +13,7 @@
 	</bean>
 
 	<bean id="myCoach" class="com.primetgi.springdemo.TrackCoach"
-		init-method="doMyStartupStuff" destroy-method="doMyCleanStuffYoYo">
+		init-method="doMyStartupStuff" destroy-method="doMyCleanStuffYoYo" scope="prototype">
 		<constructor-arg ref="myFortune" />
 	</bean>
 

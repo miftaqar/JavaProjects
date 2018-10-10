@@ -24,6 +24,8 @@ public class BeanScopeDemoApp {
 
 		System.out.println("\nMemory Location for alphaCoach: " + alphaCoach);
 
+		System.out.println("From- theCoach: "+theCoach.getDailyFortune());
+		System.out.println("From- alphaCoach: "+alphaCoach.getDailyFortune());
 		// close the context
 
 		context.close();

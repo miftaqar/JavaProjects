@@ -13,7 +13,7 @@
 	</bean>
 
 	<bean id="myCoach" class="com.primetgi.springdemo.TrackCoach"
-		scope="prototype">
+		scope="singleton">
 		<constructor-arg ref="myFortune" />
 	</bean>
 
