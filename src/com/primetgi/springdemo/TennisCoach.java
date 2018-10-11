@@ -16,6 +16,7 @@ public class TennisCoach implements Coach {
 	public TennisCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService; 
 	}
+	
 	@Override
 	public String getDailyWorkout() {
 
