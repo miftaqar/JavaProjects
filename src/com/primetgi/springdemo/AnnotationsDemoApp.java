@@ -20,6 +20,7 @@ public class AnnotationsDemoApp {
 		System.out.println("From Boxing Coach: "+theBoxingCoach.getDailyWorkout());
 		System.out.println("From Boxing Coach: "+theBoxingCoach.getDailyFortune());
 		
+		
 		//close the context
 		context.close();
 	}
