@@ -1,11 +1,13 @@
 package com.primetgi.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BoxingCoach implements Coach {
 
+	
 	private FortuneService fortuneService;
 
 	public BoxingCoach() {
@@ -14,12 +16,14 @@ public class BoxingCoach implements Coach {
 
 	// define a setter method
 	@Autowired
+	@Qualifier("happyFortuneService")
 	public void setFortuneServie(FortuneService theFortuneService) {
 		System.out.println(">> Inside Setter Method - Boxing Coach >>");
 		fortuneService = theFortuneService;
 	}
 
 	@Autowired
+	@Qualifier("happyFortuneService")
 	public void doSomeCrazyStuff(FortuneService fortuneService) {
 		System.out.println(">> Inside doSomeCrazyStuff method - BoxingCoach");
 	}
