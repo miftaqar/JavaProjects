@@ -12,6 +12,8 @@
 	<context:component-scan base-package="com.primetgi.springdemo" />
 	
 	<context:property-placeholder location="classpath:sports.properties"/>
+	
+	<context:property-placeholder location="classpath:myLogger.properties"/>
 
 </beans>
 

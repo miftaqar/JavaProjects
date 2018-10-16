@@ -28,9 +28,11 @@ public class AnnotationsDemoApp {
 		System.out.println("From Cricket Coach: " + theCricketCoach.getDailyFortune());
 		System.out.println("\n------------------------------");
 
-		Coach theSwimCoach = context.getBean("swimCoach", Coach.class);
+		SwimCoach theSwimCoach = context.getBean("swimCoach", SwimCoach.class);
 		System.out.println("From Swim Coach: " + theSwimCoach.getDailyWorkout());
 		System.out.println("From Swim Coach: " + theSwimCoach.getDailyFortune());
+		System.out.println(theSwimCoach.getEmailId());
+		System.out.println(theSwimCoach.getTeamName());
 		System.out.println("\n------------------------------");
 
 		Coach theSoccerCoach = context.getBean("soccerCoach", Coach.class);
