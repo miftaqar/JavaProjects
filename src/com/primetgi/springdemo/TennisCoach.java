@@ -2,13 +2,15 @@ package com.primetgi.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 //Below uses Explicit BeanId 
 //@Component("theTennisCoach")
 
 //Below uses Default BeanId i.e className  'tennisCoach'
-@Component()
+@Component
+@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	private FortuneService fortuneService;
