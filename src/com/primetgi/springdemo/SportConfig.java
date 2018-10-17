@@ -12,10 +12,19 @@ public class SportConfig {
 	public FortuneService happyFortuneService() {
 		return new HappyFortuneService();
 	}
-	
+
 	@Bean
-	public Coach BadmintonCoach() {
-		BadmintonCoach badmintonCoach = new BadmintonCoach(happyFortuneService());
-		return badmintonCoach;
+	public Coach badmintonCoach() {
+		return new BadmintonCoach(happyFortuneService());
+	}
+
+	@Bean
+	public FortuneService RESTFortuneService() {
+		return new RESTFortuneService();
+	}
+
+	@Bean
+	public Coach tableTennisCoach() {
+		return new TableTennisCoach();
 	}
 }

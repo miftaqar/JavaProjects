@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class BadmintonCoach implements Coach {
 
 	private FortuneService fortuneService;
-	
+
 	public BadmintonCoach(FortuneService theFortuneService) {
 		fortuneService = theFortuneService;
 	}
