@@ -3,9 +3,11 @@ package com.primetgi.springdemo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("com.primetgi.springdemo")
+@PropertySource("classpath:sports.properties")
 public class SportConfig {
 
 	@Bean
@@ -26,5 +28,15 @@ public class SportConfig {
 	@Bean
 	public Coach tableTennisCoach() {
 		return new TableTennisCoach();
+	}
+
+	@Bean
+	public Coach footBallCoach() {
+		return new FootBallCoach(happyFortuneService());
+	}
+
+	@Bean
+	public Coach cricketCoach() {
+		return new CricketCoach();
 	}
 }

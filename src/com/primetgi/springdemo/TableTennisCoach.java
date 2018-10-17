@@ -10,9 +10,19 @@ public class TableTennisCoach implements Coach {
 	@Autowired
 	@Qualifier("RESTFortuneService")
 	private FortuneService fortuneService;
-	
+
 	public void setFortuneService(FortuneService fortuneService) {
 		this.fortuneService = fortuneService;
+	}
+
+	public TableTennisCoach() {
+		System.out.println(">> TT Coach Constructor >>");
+	}
+
+	@Autowired
+	@Qualifier("RESTFortuneService")
+	public void doSomeCrazyStuff(FortuneService fortuneService) {
+		System.out.println(">> Inside doSomeCrazyStuff Method -- TT Coach >> ");
 	}
 
 	@Override
@@ -22,7 +32,7 @@ public class TableTennisCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		
+
 		return fortuneService.getFortune();
 	}
 
