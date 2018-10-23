@@ -4,13 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Hello World - Input Form</title>
 </head>
 <body>
-	<h1>
-		<b>Welcome to Spring MVC Demo Application </b>
-	</h1>
-	
-	<a href="showForm">Hello World Form</a>
+	<form action="processForm" method="get">
+		<input type="text" name="studentName" placeholder="Whats your Name">
+		<input type="submit" value="Submit">
+	</form>
 </body>
 </html>

@@ -4,13 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Hello World - Input Form</title>
 </head>
 <body>
-	<h1>
-		<b>Welcome to Spring MVC Demo Application </b>
-	</h1>
-	
-	<a href="showForm">Hello World Form</a>
+
+	<h2>Hello World Of Spring</h2>
+	<br>
+	<br> Student Name: ${param.studentName}
 </body>
 </html>
