@@ -19,8 +19,13 @@
 		width="100" height="100" />
 
 	<br>
+	<br>
 	<a href="hello/showForm">Hello World Form</a>
 
+	<br>
+	<br>
+	<a href="student/showForm">Student Form</a>
+	
 	<br>
 	<br>
 	<input type="button" onclick="doSomeWork()" value="Click Me" />
