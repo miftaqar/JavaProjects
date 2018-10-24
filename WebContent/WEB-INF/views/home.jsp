@@ -3,14 +3,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/my-test.css">
+
+<script
+	src="${pageContext.request.contextPath}/resources/js/simple-test.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>
-		<b>Welcome to Spring MVC Demo Application </b>
-	</h1>
-	
+	<h2>Spring Application</h2>
+	<p>Welcome to Spring MVC Demo Application</p>
+	<img alt="Spring Logo"
+		src="${pageContext.request.contextPath}/resources/images/Spring-Logo.png"
+		width="100" height="100" />
+
+	<br>
 	<a href="showForm">Hello World Form</a>
+
+	<br>
+	<br>
+	<input type="button" onclick="doSomeWork()" value="Click Me" />
+
 </body>
 </html>
