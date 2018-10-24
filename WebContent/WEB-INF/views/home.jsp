@@ -19,7 +19,7 @@
 		width="100" height="100" />
 
 	<br>
-	<a href="showForm">Hello World Form</a>
+	<a href="hello/showForm">Hello World Form</a>
 
 	<br>
 	<br>
