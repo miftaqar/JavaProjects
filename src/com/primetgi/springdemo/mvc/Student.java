@@ -8,8 +8,11 @@ public class Student {
 	private String lastName;
 	private String country;
 	private String subject;
+	private String favoriteLanguage;
+	private String age;
 
 	private LinkedHashMap<String, String> countryOptions;
+	private LinkedHashMap<String, String> ageOptions;
 
 	public Student() {
 
@@ -21,7 +24,20 @@ public class Student {
 		countryOptions.put("US", "United Stated of America");
 		countryOptions.put("IN", "India");
 		countryOptions.put("UK", "London");
+		
+		ageOptions = new LinkedHashMap<>();
+		ageOptions.put("15-20", "15-20");
+		ageOptions.put("21-25", "21-25");
+		ageOptions.put("26-30", "26-30");
 
+	}
+
+	public String getFavoriteLanguage() {
+		return favoriteLanguage;
+	}
+
+	public void setFavoriteLanguage(String favoriteLanguage) {
+		this.favoriteLanguage = favoriteLanguage;
 	}
 
 	public String getSubject() {
@@ -60,4 +76,17 @@ public class Student {
 		return countryOptions;
 	}
 
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public LinkedHashMap<String, String> getAgeOptions() {
+		return ageOptions;
+	}
+
+	
 }

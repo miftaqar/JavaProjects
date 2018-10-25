@@ -11,10 +11,20 @@
 	The Student is Confirmed: ${student.firstName} ${student.lastName}
 
 	<br>
-	<br> Country: ${student.country} 
-	
+	<br> Country: ${student.country}
+
 	<br>
 	<br> Subject: ${student.subject}
+
+	<br>
+	<br> Student`s Favorite Programming Language:
+	${student.favoriteLanguage}
+
+	<br>
+	<br> Student`s Age:
+	${student.age}
+
+
 
 </body>
 </html>
