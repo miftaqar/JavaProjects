@@ -10,6 +10,7 @@ public class Student {
 	private String subject;
 	private String favoriteLanguage;
 	private String age;
+	private String[] operatingSystems;
 
 	private LinkedHashMap<String, String> countryOptions;
 	private LinkedHashMap<String, String> ageOptions;
@@ -24,7 +25,7 @@ public class Student {
 		countryOptions.put("US", "United Stated of America");
 		countryOptions.put("IN", "India");
 		countryOptions.put("UK", "London");
-		
+
 		ageOptions = new LinkedHashMap<>();
 		ageOptions.put("15-20", "15-20");
 		ageOptions.put("21-25", "21-25");
@@ -88,5 +89,12 @@ public class Student {
 		return ageOptions;
 	}
 
-	
+	public String[] getOperatingSystems() {
+		return operatingSystems;
+	}
+
+	public void setOperatingSystems(String[] operatingSystems) {
+		this.operatingSystems = operatingSystems;
+	}
+
 }

@@ -37,7 +37,6 @@
 		
 		Favourite Programming Language:
 		<br>
-		<br>
 
 		<form:radiobutton path="favoriteLanguage" value="Java" /> Java 
 		<form:radiobutton path="favoriteLanguage" value="PHP" /> PHP 
@@ -49,6 +48,15 @@
 		
 		Student Age: <form:radiobuttons path="age"
 			items="${student.ageOptions}" />
+
+		<br>
+		<br>
+		
+		Operating System:
+		<br> 
+		Linux <form:checkbox path="operatingSystems" value="Linux" /> 
+		MAC OS <form:checkbox path="operatingSystems" value="Mac OS" />
+		Windows Linux <form:checkbox path="operatingSystems" value="Windows" />
 
 		<br>
 		<br>
