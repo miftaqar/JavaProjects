@@ -20,10 +20,16 @@
 		<br>
 
 		Country: <form:select path="country">
-			<form:option value="France" label="France"></form:option>
-			<form:option value="USA" label="USA"></form:option>
-			<form:option value="India" label="India"></form:option>
-			<form:option value="UK" label="UK"></form:option>
+			<form:options items="${student.countryOptions}" />
+
+		</form:select>
+
+		<br>
+		<br>
+
+		Subject: <form:select path="subject">
+			<form:options items="${theSubjectOptions}" />
+
 		</form:select>
 
 		<input type="submit" value="Submit">

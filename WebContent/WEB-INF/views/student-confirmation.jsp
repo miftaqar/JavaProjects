@@ -12,6 +12,9 @@
 
 	<br>
 	<br> Country: ${student.country} 
+	
+	<br>
+	<br> Subject: ${student.subject}
 
 </body>
 </html>
