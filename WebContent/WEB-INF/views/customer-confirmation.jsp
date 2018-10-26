@@ -9,5 +9,11 @@
 </head>
 <body>
 	The Customer Confirmed : ${customer.firstName} ${customer.lastName}
+
+	<br>
+	<br> Customer Free Passes : ${customer.freePasses}
+
+	<br>
+	<br> Postal Code : ${customer.postalCode}
 </body>
 </html>

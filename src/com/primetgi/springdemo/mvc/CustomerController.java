@@ -21,9 +21,9 @@ public class CustomerController {
 
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		
+
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
-		
+
 		binder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 
@@ -37,7 +37,9 @@ public class CustomerController {
 
 	@RequestMapping("/processForm")
 	public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult) {
+
 		System.out.println("LastName: |" + customer.getLastName() + "|");
+
 		if (bindingResult.hasErrors()) {
 			return "customer-form";
 		} else {
