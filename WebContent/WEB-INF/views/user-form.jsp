@@ -19,7 +19,7 @@
 				<tr>
 					<td>User Name :</td>
 					<td><form:input path="userName" /> <form:errors
-							path="userName" cssClass="error" /></td>
+							path="userName" cssStyle="color: #ff0000;" /></td>
 				</tr>
 				<tr>
 					<td>Password :</td>
@@ -36,7 +36,9 @@
 				<tr>
 					<td>Profession :</td>
 					<td><form:select path="profession">
+							<form:option value="" label="Please Select Profession"></form:option>
 							<form:options items="${professionList}" />
+							<form:errors path="profession" cssStyle="color: #ff0000;" />
 						</form:select></td>
 				</tr>
 				<tr align="center">

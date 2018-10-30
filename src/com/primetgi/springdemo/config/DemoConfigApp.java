@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -12,9 +13,12 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.primetgi.springdemo.mvc.validation.ProfessionValidator;
+
 @Configuration
 @EnableWebMvc
-@PropertySource("classpath:../subjects.properties")
+@PropertySources({ @PropertySource("classpath:../subjects.properties"),
+		@PropertySource("classpath:../professionValidation.properties")})
 @ComponentScan(basePackages = "com.primetgi.springdemo")
 public class DemoConfigApp implements WebMvcConfigurer {
 
@@ -39,5 +43,10 @@ public class DemoConfigApp implements WebMvcConfigurer {
 		resourceBundleMessageSource.setBasenames("resources/messages");
 		return resourceBundleMessageSource;
 
+	}
+
+	@Bean()
+	public ProfessionValidator professionValidator() {
+		return new ProfessionValidator();
 	}
 }

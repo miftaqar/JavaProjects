@@ -6,9 +6,12 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.Validator;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,11 +21,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/user")
 public class UserController {
 
+	@Autowired
+	@Qualifier("professionValidator")
+	private Validator validator;
+
 	@InitBinder
 	public void initBinder(WebDataBinder webDataBinder) {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 
 		webDataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
+		
+		webDataBinder.setValidator(validator);
 	}
 
 	@RequestMapping("/showForm")
