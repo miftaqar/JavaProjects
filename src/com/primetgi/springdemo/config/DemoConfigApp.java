@@ -1,5 +1,7 @@
 package com.primetgi.springdemo.config;
 
+import java.util.Locale;
+
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -7,18 +9,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.primetgi.springdemo.mvc.validation.ProfessionValidator;
 
 @Configuration
 @EnableWebMvc
-@PropertySources({ @PropertySource("classpath:../subjects.properties"),
-		@PropertySource("classpath:../professionValidation.properties")})
+@PropertySource("classpath:../subjects.properties")
 @ComponentScan(basePackages = "com.primetgi.springdemo")
 public class DemoConfigApp implements WebMvcConfigurer {
 
@@ -40,7 +43,7 @@ public class DemoConfigApp implements WebMvcConfigurer {
 	@Bean
 	public MessageSource messageSource() {
 		ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
-		resourceBundleMessageSource.setBasenames("resources/messages");
+		resourceBundleMessageSource.setBasenames("resources/messages", "resources/formValidation");
 		return resourceBundleMessageSource;
 
 	}
@@ -49,4 +52,5 @@ public class DemoConfigApp implements WebMvcConfigurer {
 	public ProfessionValidator professionValidator() {
 		return new ProfessionValidator();
 	}
+
 }

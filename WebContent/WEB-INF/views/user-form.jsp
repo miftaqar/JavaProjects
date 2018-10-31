@@ -36,10 +36,10 @@
 				<tr>
 					<td>Profession :</td>
 					<td><form:select path="profession">
-							<form:option value="" label="Please Select Profession"></form:option>
+							<form:option value="" label="Please Select Profession" />
 							<form:options items="${professionList}" />
-							<form:errors path="profession" cssStyle="color: #ff0000;" />
 						</form:select></td>
+					<td><form:errors path="profession" cssStyle="color: #ff0000;" /></td>
 				</tr>
 				<tr align="center">
 					<td><input type="submit" value="Submit"></td>

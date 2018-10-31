@@ -16,8 +16,7 @@ public class ProfessionValidator implements Validator{
 
 	@Override
 	public void validate(Object obj, Errors errors) {
-		ValidationUtils.rejectIfEmpty(errors, "profession", "valid.profession");
-		
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "profession", "valid.profession");
 	}
 
 }
