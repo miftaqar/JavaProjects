@@ -23,7 +23,13 @@
 				</tr>
 				<tr>
 					<td>Password :</td>
-					<td><form:password path="password" /></td>
+					<td><form:password path="password" /> <form:errors
+							path="password" cssStyle="color: #ff0000;" /></td>
+				</tr>
+				<tr>
+					<td>Confirm Password :</td>
+					<td><form:password path="confirmPassword" /> <form:errors
+							path="confirmPassword" cssStyle="color: #ff0000;" /></td>
 				</tr>
 				<tr>
 					<td>EmailId :</td>
@@ -38,8 +44,7 @@
 					<td><form:select path="profession">
 							<form:option value="" label="Please Select Profession" />
 							<form:options items="${professionList}" />
-						</form:select></td>
-					<td><form:errors path="profession" cssStyle="color: #ff0000;" /></td>
+						</form:select> <form:errors path="profession" cssStyle="color: #ff0000;" /></td>
 				</tr>
 				<tr align="center">
 					<td><input type="submit" value="Submit"></td>

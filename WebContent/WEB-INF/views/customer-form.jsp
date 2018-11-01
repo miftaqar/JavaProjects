@@ -18,6 +18,7 @@
 	<br>
 	<form:form action="processForm" modelAttribute="customer">
 		First Name: <form:input path="firstName" />
+		<form:errors path="firstName" cssStyle="color: #ff0000;" />
 
 		<br>
 		<br>
@@ -43,6 +44,14 @@
 		<br>
 		<br>
 		
+		Country : <form:select path="country">
+			<form:option value="" label="Please Select Country" />
+			<form:options items="${countryList}" />
+		</form:select>
+		<form:errors path="country" cssClass="error" />
+		<br>
+		<br>
+
 		<input type="submit" value="Submit">
 	</form:form>
 </body>

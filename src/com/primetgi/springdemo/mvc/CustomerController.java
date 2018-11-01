@@ -1,5 +1,8 @@
 package com.primetgi.springdemo.mvc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -31,12 +34,14 @@ public class CustomerController {
 	public String showForm(Model model) {
 
 		model.addAttribute("customer", new Customer());
+		
+		initModelList(model);
 
 		return "customer-form";
 	}
 
 	@RequestMapping("/processForm")
-	public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult) {
+	public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult, Model model) {
 
 		System.out.println("LastName: |" + customer.getLastName() + "|");
 		
@@ -45,10 +50,21 @@ public class CustomerController {
 		System.out.println("\n\n\n\n");
 
 		if (bindingResult.hasErrors()) {
+			initModelList(model);
 			return "customer-form";
 		} else {
 			return "customer-confirmation";
 		}
 
+	}
+	
+	public void initModelList(Model model) {
+		List<String> countryList = new ArrayList<>();
+		
+		countryList.add("India");
+		countryList.add("USA");
+		countryList.add("UK");
+		
+		model.addAttribute("countryList", countryList);
 	}
 }

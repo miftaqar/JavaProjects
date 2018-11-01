@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import com.primetgi.springdemo.mvc.validation.CourseCode;
 
 public class Customer {
-
+	@NotNull(message = "is required")
 	private String firstName;
 
 	@NotNull(message = "is required")
@@ -20,12 +20,15 @@ public class Customer {
 	@Min(value = 0, message = "value must be greater than or equal to 0")
 	@Max(value = 10, message = "value must be less than or equal to 10")
 	private Integer freePasses;
-	
-	@Pattern(regexp="^[a-zA-z0-9]{5}",message="Only 5 characters / digits")
+
+	@Pattern(regexp = "^[a-zA-z0-9]{5}", message = "Only 5 characters / digits")
 	private String postalCode;
-	
-	@CourseCode(value = {"TOP", "LUV"}, message = "must start with TOP or LUV")
+
+	@CourseCode(value = { "TOP", "LUV" }, message = "must start with TOP or LUV")
 	private String courseCode;
+	
+	@NotNull(message = "is required")
+	private String country;
 
 	public String getFirstName() {
 		return firstName;
@@ -65,6 +68,14 @@ public class Customer {
 
 	public void setCourseCode(String courseCode) {
 		this.courseCode = courseCode;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	

@@ -18,5 +18,9 @@
 
 	<br>
 	<br> Course Code : ${customer.courseCode}
+	
+	<br>
+	<br> Country : ${customer.country}
+	
 </body>
 </html>

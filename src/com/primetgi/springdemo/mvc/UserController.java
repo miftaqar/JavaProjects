@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
 	@Autowired
-	@Qualifier("professionValidator")
+	@Qualifier("formValidator")
 	private Validator validator;
 
 	@InitBinder
@@ -48,8 +48,8 @@ public class UserController {
 	}
 
 	@RequestMapping("/processForm")
-	public String processForm(Map<String, Object> model, @Valid @ModelAttribute("userForm") User user,
-			BindingResult bindingResult) {
+	public String processForm(@Valid @ModelAttribute("userForm") User user,
+			BindingResult bindingResult, Map<String, Object> model) {
 		// For Testing
 
 		System.out.println("---------");
