@@ -33,7 +33,8 @@
 				</tr>
 				<tr>
 					<td>EmailId :</td>
-					<td><form:input path="emailId" /></td>
+					<td><form:input path="emailId" /> <form:errors path="emailId"
+							cssStyle="color: #ff0000;" /></td>
 				</tr>
 				<tr>
 					<td>Date of Birth (DD/MM/YYYY) :</td>

@@ -1,5 +1,6 @@
 package com.primetgi.springdemo.mvc;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -29,6 +30,10 @@ public class Customer {
 	
 	@NotNull(message = "is required")
 	private String country;
+	
+	@NotNull(message = "is required")
+	@Email
+	private String emailId;
 
 	public String getFirstName() {
 		return firstName;
@@ -77,6 +82,16 @@ public class Customer {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+	
+	
 
 	
 }

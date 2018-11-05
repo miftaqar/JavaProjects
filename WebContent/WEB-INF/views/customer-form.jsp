@@ -52,6 +52,10 @@
 		<br>
 		<br>
 
+		Email Id : <form:input path="emailId" />
+		<form:errors path="emailId" cssClass="error" />
+		<br>
+		<br>
 		<input type="submit" value="Submit">
 	</form:form>
 </body>

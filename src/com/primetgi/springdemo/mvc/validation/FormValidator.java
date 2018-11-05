@@ -35,8 +35,6 @@ public class FormValidator implements Validator {
 			user.setConfirmPassword("");
 		}
 
-		System.out.println("Password Field : " + user.getPassword());
-		System.out.println("Confirm Password Field : " + user.getConfirmPassword());
 		if (!user.getPassword().equals(user.getConfirmPassword())) {
 			errors.rejectValue("confirmPassword", "valid.passwordConfDiff");
 		}

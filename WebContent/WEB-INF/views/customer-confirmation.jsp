@@ -22,5 +22,8 @@
 	<br>
 	<br> Country : ${customer.country}
 	
+	<br>
+	<br> EmailId : ${customer.emailId}
+	
 </body>
 </html>

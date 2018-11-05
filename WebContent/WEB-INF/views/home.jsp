@@ -36,6 +36,11 @@
 
 	<br>
 	<br>
+	<a href="SpringMvcInternationalization/init">Spring
+		Internationalization Page</a>
+
+	<br>
+	<br>
 	<input type="button" onclick="doSomeWork()" value="Click Me" />
 
 </body>
