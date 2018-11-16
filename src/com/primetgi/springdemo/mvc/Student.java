@@ -2,8 +2,11 @@ package com.primetgi.springdemo.mvc;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.NotNull;
+
 public class Student {
 
+	@NotNull(message = "is required")
 	private String firstName;
 	private String lastName;
 	private String country;

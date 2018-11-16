@@ -10,6 +10,7 @@
 <body>
 	<form:form action="processForm" modelAttribute="student">
 		First Name: <form:input path="firstName" />
+		<form:errors path="firstName" cssStyle="color: #ff0000;" />
 
 		<br>
 		<br>
