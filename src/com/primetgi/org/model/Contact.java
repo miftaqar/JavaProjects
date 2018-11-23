@@ -1,4 +1,4 @@
-package com.primetgi.contact.model;
+package com.primetgi.org.model;
 
 public class Contact {
 

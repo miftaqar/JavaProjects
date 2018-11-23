@@ -1,8 +1,8 @@
-package com.primetgi.contact.dao;
+package com.primetgi.org.dao;
 
 import java.util.List;
 
-import com.primetgi.contact.model.Contact;
+import com.primetgi.org.model.Contact;
 
 public interface ContactDAO {
 

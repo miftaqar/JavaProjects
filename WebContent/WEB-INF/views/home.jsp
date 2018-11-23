@@ -41,6 +41,15 @@
 
 	<br>
 	<br>
+	<a href="usersList/list">User`s List Form</a>
+
+	<br>
+	<br>
+	
+	<a href="crud/contact/">Contact Manager (CRUD Application)</a>
+
+	<br>
+	<br>
 	<input type="button" onclick="doSomeWork()" value="Click Me" />
 
 </body>
